@@ -1,12 +1,15 @@
+import queue
+
 def bfs(graph, n):
     if n == 1:
         return 0
-    queue = [1]
+    q = queue.Queue()
+    q.put(1)
     cover = set()
     cover.add(1)
     dis = 1
-    while(len(queue) > 0):
-        plot = queue.pop(0)
+    while(not q.empty()):
+        plot = q.get()
         if(plot not in graph.keys()):
             continue
         neighbor = graph[plot]
@@ -15,7 +18,7 @@ def bfs(graph, n):
                 return dis
             
             if(i not in cover):
-                queue.append(i)
+                q.put(i)
                 cover.add(i)
         dis += 1
     return -1        
