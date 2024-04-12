@@ -52,7 +52,7 @@ def dfs(arr80, a0, b0):
             if state[0] not in cover:
                 q.append(state)
                 cover.add(state[0])
-    return 0
+    return -1
 
 arr8 = input().replace(' ','')
 pos = arr8.find('x')
