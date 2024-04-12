@@ -42,7 +42,7 @@ def move(arr8, a, b, direct, cnt):
 
 def dijkstra(arr80, a0, b0):
     q = queue.PriorityQueue()
-    q.put((0, arr80, a0, b0, 'up'))
+    q.put((0, arr80, a0, b0, ''))
     cover = set()
     cover.add(arr80)
     
@@ -55,7 +55,7 @@ def dijkstra(arr80, a0, b0):
             if state[1] not in cover:
                 q.put(state)
                 cover.add(state[1])
-    return 0
+    return 'unsolvable'
 
 arr8 = input().replace(' ','')
 pos = arr8.find('x')
