@@ -4,21 +4,19 @@ def bfs(graph, n):
     if n == 1:
         return 0
     q = queue.Queue()
-    q.put(1)
+    q.put((1, 0))
     cover = set()
-    cover.add(1)
-    dis = 1
     while(not q.empty()):
-        plot = q.get()
+        plot, dis = q.get()
+        if(plot == n):
+            return dis
+        if(plot in cover):
+            continue
+        cover.add(plot)
+        
         for neighbor in graph[plot].keys():
-            if(neighbor == n):
-                return dis
-            
-            if(neighbor not in cover):
-                q.put(neighbor)
-                cover.add(neighbor)
-        dis += 1
-    return -1        
+            q.put((neighbor, dis+1))
+    return -1       
 
 n, m = map(int,input().split(' '))
 graph = {}
