@@ -42,7 +42,7 @@ def move(arr8, a, b, direct, cnt):
 
 def bfs(arr80, a0, b0):
     q = queue.Queue()
-    q.put((arr80, a0, b0, 'up', 0))
+    q.put((arr80, a0, b0, '', 0))
     cover = set()
     cover.add(arr80)
     
@@ -55,7 +55,7 @@ def bfs(arr80, a0, b0):
             if state[0] not in cover:
                 q.put(state)
                 cover.add(state[0])
-    return 0
+    return -1
 
 arr8 = input().replace(' ','')
 pos = arr8.find('x')
