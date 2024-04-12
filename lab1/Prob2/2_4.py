@@ -90,7 +90,7 @@ def move(old_state):
 def astar(arr80, a0, b0):
     q = queue.PriorityQueue()
     value0 = wrong_pos(arr80)
-    state0 = status(arr80, a0, b0, 'u', 0, value0, None)
+    state0 = status(arr80, a0, b0, '', 0, value0, None)
     q.put(state0)
     cover = set()
     cover.add(arr80)
