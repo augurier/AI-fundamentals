@@ -39,7 +39,7 @@ def move(arr8, a, b, direct):
 
 def dfs(arr80, a0, b0):
     q = []
-    q.append((arr80, a0, b0, 'up'))
+    q.append((arr80, a0, b0, ''))
     cover = set()
     cover.add(arr80)
     
