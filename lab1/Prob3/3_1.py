@@ -58,22 +58,22 @@ def move(maze, n, m, old_point):
     direct = old_point.direct
 
     if a != 0 and direct != 'd' and maze[a-1][b] != 1:
-        if maze[a][b] == 2 or maze[a][b] == 5:
+        if maze[a-1][b] == 2 or maze[a-1][b] == 5:
             ret.append(up(old_point, 2))
         else:
             ret.append(up(old_point, 1))
     if b != 0 and direct != 'r' and maze[a][b-1] != 1:
-        if maze[a][b] == 2 or maze[a][b] == 5:
+        if maze[a][b-1] == 2 or maze[a][b-1] == 5:
             ret.append(left(old_point, 2))
         else:
             ret.append(left(old_point, 1))
     if a != n-1 and direct != 'u' and maze[a+1][b] != 1:
-        if maze[a][b] == 2 or maze[a][b] == 5:
+        if maze[a+1][b] == 2 or maze[a+1][b] == 5:
             ret.append(down(old_point, 2))
         else:
             ret.append(down(old_point, 1))   
     if b != m-1 and direct != 'l' and maze[a][b+1] != 1:
-        if maze[a][b] == 2 or maze[a][b] == 5:
+        if maze[a][b+1] == 2 or maze[a][b+1] == 5:
             ret.append(right(old_point, 2))
         else:
             ret.append(right(old_point, 1))           
@@ -261,12 +261,14 @@ visualize_maze_with_path(maze4, path4, "astar", 4)
 plt.show()
 
 '''
-5 5
-0 0 0 0 0
-1 2 1 1 0
-0 0 0 0 0
-0 1 1 1 1
-0 0 0 0 0
+7 7
+0 0 0 0 0 0 0
+1 2 1 1 1 1 0
+0 0 0 0 0 0 0
+0 2 0 1 1 1 1
+0 1 0 0 0 0 0
+1 1 1 1 1 0 1
+0 2 0 0 0 0 0
 
 5 5
 0 0 0 0 0
