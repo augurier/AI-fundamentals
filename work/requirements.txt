@@ -1,7 +1,0 @@
-numpy==1.24.4
-opencv_contrib_python==4.10.0.82
-opencv_python==4.9.0.80
-pynput==1.7.7
-pywin32==305.1
-pywin32==306
-ultralytics==8.2.22
