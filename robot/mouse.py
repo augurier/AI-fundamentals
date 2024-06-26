@@ -141,13 +141,10 @@ def main():
                                                  int(xyItem[1] - (game_height) // 2), 0, 0)
                         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
                         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
-                        time.sleep(0.00001)
-                        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
-                        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
                         break
 
 
-        time.sleep(0.001)
+        time.sleep(0.01)
         
     print(flag)
 
