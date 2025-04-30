@@ -1,3 +1,5 @@
+# 介绍
+cs2的自瞄外挂  
 # 环境配置
 python3.8 版本  
 安装依赖 `pip install -r requirements.txt`
